@@ -37,7 +37,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 4.  **Business Section:**
     *   Content:
         *   신재생에너지 사업개발 컨설팅 (발전사업허가/개발행위/도시관리계획/공유수면 등 인허가 자문, 사업개발 기획)
-        *   신재생에너지 투자 및 금융 자문 (투자 유치 및 프로젝트 파이이낸싱(PF) 자문, 주민참여형 금융구조 설계)
+        *   신재생에너지 투자 및 금융 자문 (투자 유치 및 프로젝트 파이낸싱(PF) 자문, 주민참여형 금융구조 설계)
         *   풍력자원평가 및 풍력발전사업 발전량 분석 (Met mast 설치 및 풍황자원평가, 발전량 평가 및 풍력발전단지 설계)
         *   신재생에너지 발전사업 중개 (태양광, 육상/해상 풍력, 연료전지 발전사업 중개거래, RE100 PPA 중개거래)
         *   신재생에너지 발전사업 운영 (풍력, 태양광 발전사업 운영, 소규모 태양광 발전사업 운영 및 법인 관리)
@@ -54,13 +54,21 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Copyright notice.
     *   Responsiveness: Layout adjusts for tablet and mobile screens.
 
-## Current Task: Implement Image Gallery and Light/Dark Mode
+## Current Task: Integrate Gemini API
 
 *   **Status:** In Progress
-*   **Previous Step:** Creation of placeholder images in `phto` directory.
+*   **Previous Step:** Implemented image gallery and light/dark mode.
 *   **Steps:**
-    1.  Modify `index.html` to include a container for the image gallery and a theme toggle button.
-    2.  Create a Web Component in `main.js` to display images dynamically, categorized by business.
-    3.  Implement light/dark mode toggle functionality in `main.js` (adding/removing a class from `body`).
-    4.  Update `style.css` to define CSS variables for light and dark mode colors and apply thematic styling.
-    5.  Ensure proper linking of `main.js` and `style.css` in `index.html`.
+    1.  Add Gemini Web SDK script from CDN to `index.html`.
+    2.  Add placeholder for Gemini API key in `main.js`.
+    3.  Add basic Gemini model initialization and a simple function call in `main.js`.
+    4.  Instruct user to replace placeholder API key and integrate the example function as needed.
+
+## Completed Tasks:
+
+*   **Implement Image Gallery and Light/Dark Mode:**
+    *   Modified `index.html` to include a container for the image gallery and a theme toggle button.
+    *   Created a Web Component in `main.js` to display images dynamically, categorized by business.
+    *   Implemented light/dark mode toggle functionality in `main.js` (adding/removing a class from `body`).
+    *   Updated `style.css` to define CSS variables for light and dark mode colors and apply thematic styling.
+    *   Ensured proper linking of `main.js` and `style.css` in `index.html`.

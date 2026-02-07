@@ -54,11 +54,13 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Copyright notice.
     *   Responsiveness: Layout adjusts for tablet and mobile screens.
 
-## Current Task: Rebuilding Homepage Structure and Content
+## Current Task: Implement Image Gallery and Light/Dark Mode
 
 *   **Status:** In Progress
-*   **Previous Step:** Git commit of initial light theme design.
+*   **Previous Step:** Creation of placeholder images in `phto` directory.
 *   **Steps:**
-    1.  Reconstruct `index.html` with the new tab-based navigation and sections (About, Business, Management, Contact), incorporating the provided content.
-    2.  Remove/Adjust styles in `style.css` for old sections and add/modify for new sections.
-    3.  Ensure `main.js` smooth scrolling is compatible with new section IDs.
+    1.  Modify `index.html` to include a container for the image gallery and a theme toggle button.
+    2.  Create a Web Component in `main.js` to display images dynamically, categorized by business.
+    3.  Implement light/dark mode toggle functionality in `main.js` (adding/removing a class from `body`).
+    4.  Update `style.css` to define CSS variables for light and dark mode colors and apply thematic styling.
+    5.  Ensure proper linking of `main.js` and `style.css` in `index.html`.

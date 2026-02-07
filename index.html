@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +14,32 @@
 
     <header class="main-header">
         <nav class="main-nav">
-            <a href="#" class="logo">(주)메가와트알이</a>
+            <a href="#" class="logo">
+                <img src="메가와트알이 로고.png" alt="(주)메가와트알이 로고" class="company-logo">
+                (주)메가와트알이
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#business">Business</a></li>
                 <li><a href="#management">Management</a></li>
                 <li><a href="#contact" class="cta-button nav-cta">Contact</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="sr-only">Toggle theme</span>
+                <svg class="sun" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 00-.707-.293H15a1 1 0 000 2h.01a1 1 0 00.707-.293l.707-.707a1 1 0 00-1.414-1.414l-.707.707zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.95-4.464a1 1 0 00-.293.707V15a1 1 0 002 0v-.01a1 1 0 00-.293-.707l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm-2.12-10.607l-.707-.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1z"></path>
+                </svg>
+                <svg class="moon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
         </nav>
     </header>
 
     <main>
         <section id="hero" class="hero-section">
             <div class="container">
-                <h1 class="hero-title">A New Era of Clean Energy</h1>
+                <h1 class="hero-title">A New Challenger of Clean Energy</h1>
                 <p class="hero-subtitle">Leading Korea's transition to renewable energy with innovative solutions and sustainable growth.</p>
                 <a href="#about" class="cta-button hero-cta">Learn More</a>
             </div>
@@ -90,43 +102,8 @@
         <section id="management" class="content-section">
             <div class="container">
                 <h2 class="section-title">Management & Portfolio</h2>
-                <div class="management-grid">
-                    <div class="management-item">
-                        <h3>1. 경북 영주 태양광 발전소</h3>
-                        <p><strong>용량:</strong> 100Kw급</p>
-                        <p><strong>주소:</strong> 경북 영주시 평은면</p>
-                        <p><strong>최초운전개시:</strong> 2018년</p>
-                        <div class="plant-image-placeholder">[발전소 전경 이미지]</div>
-                    </div>
-                    <div class="management-item">
-                        <h3>2. 충남 청양 태양광 발전소</h3>
-                        <p><strong>용량:</strong> 100Kw급</p>
-                        <p><strong>주소:</strong> 충남 청양군 청남면</p>
-                        <p><strong>최초운전개시:</strong> 2021년</p>
-                        <div class="plant-image-placeholder">[발전소 전경 이미지]</div>
-                    </div>
-                    <div class="management-item">
-                        <h3>3. 경남 진주1 태양광 발전소</h3>
-                        <p><strong>용량:</strong> 100Kw급</p>
-                        <p><strong>주소:</strong> 경남 진주시 금곡면</p>
-                        <p><strong>최초운전개시:</strong> 2024년</p>
-                        <div class="plant-image-placeholder">[발전소 전경 이미지]</div>
-                    </div>
-                     <div class="management-item">
-                        <h3>4. 경남 진주2 태양광 발전소</h3>
-                        <p><strong>용량:</strong> 300Kw급</p>
-                        <p><strong>주소:</strong> 경남 진주시 금곡면</p>
-                        <p><strong>최초운전개시:</strong> 2025년</p>
-                        <div class="plant-image-placeholder">[발전소 전경 이미지]</div>
-                    </div>
-                     <div class="management-item">
-                        <h3>5. 경남 창녕 태양광 발전소</h3>
-                        <p><strong>용량:</strong> 300Kw급</p>
-                        <p><strong>주소:</strong> 경남 창녕군 성산면</p>
-                        <p><strong>최초운전개시:</strong> 2025년</p>
-                        <div class="plant-image-placeholder">[발전소 전경 이미지]</div>
-                    </div>
-                </div>
+                <!-- Image Gallery will be loaded here dynamically -->
+                <div id="image-gallery" class="image-gallery"></div>
             </div>
         </section>
 

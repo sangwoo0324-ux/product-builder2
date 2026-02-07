@@ -2,9 +2,9 @@
 
 ## Overview
 
-The goal is to create a modern, responsive, and visually engaging single-page landing page for (주)메가와트알이. The design should evoke a sense of clean, renewable energy. The application is built using framework-less HTML, CSS, and JavaScript.
+The goal is to create a modern, responsive, and visually engaging single-page landing page for (주)메가와트알이, focusing on clean/renewable energy. The homepage will be structured with four main sections (About, Business, Management, Contact) accessible via navigation tabs.
 
-## Design & Style
+## Design & Style (Retained)
 
 *   **Aesthetics:** A bright, clean, and professional look with a light-themed UI, conveying innovation and sustainability.
 *   **Color Palette:**
@@ -14,25 +14,51 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Accent Color: `#007BFF` (Vibrant Blue)
     *   Secondary Text: `#5A6A7B` (Grayish Blue)
 *   **Typography:**
-    *   Headings: A modern, bold sans-serif font (e.g., Poppins, Montserrat).
-    *   Body: A clean, highly readable sans-serif font (e.g., Inter, Lato).
-*   **Layout:** A responsive single-page layout with distinct sections.
+    *   Headings: 'Poppins', sans-serif.
+    *   Body: 'Inter', sans-serif.
+*   **Layout:** A responsive single-page layout with distinct sections for each tab.
 
-## Features & Sections (All Completed)
+## Features & Sections (Updated)
 
-1.  **Header:** Sticky navigation with company logo.
-2.  **Hero Section:** Impactful headline and mission statement.
-3.  **Our Vision Section:** 3-column layout explaining core principles.
-4.  **Services Section:** Grid of cards detailing company services.
-5.  **Partners Section:** A grid of trusted partner logos.
-6.  **Footer:** Multi-column layout with links and contact info.
-7.  **Responsiveness:** Layout adjusts for tablet and mobile screens.
+1.  **Header:**
+    *   Sticky navigation with "(주)메가와트알이" logo.
+    *   Navigation links for "About", "Business", "Management", "Contact".
+    *   Smooth scrolling to sections.
 
-## Current Task: Finalizing and Preparing for Deploy
+2.  **Hero Section:**
+    *   Remains as is, providing a strong first impression.
+
+3.  **About Section:**
+    *   Content:
+        *   "기후 위기의 시대에 신재생에너지로의 에너지 전환은 중요하며, 대한민국이 신재생에너지로의 전환에 이바지하겠습니다."
+        *   "신재생에너지 발전사업에 대한 솔루션을 제공하고 함께 성장하도록 하겠습니다."
+        *   "신재생에너지의 공급자, 수요자, 개발자, 투자자 모두 합리적인 선택을 할 수 있도록 돕겠습니다."
+
+4.  **Business Section:**
+    *   Content:
+        *   신재생에너지 사업개발 컨설팅 (발전사업허가/개발행위/도시관리계획/공유수면 등 인허가 자문, 사업개발 기획)
+        *   신재생에너지 투자 및 금융 자문 (투자 유치 및 프로젝트 파이이낸싱(PF) 자문, 주민참여형 금융구조 설계)
+        *   풍력자원평가 및 풍력발전사업 발전량 분석 (Met mast 설치 및 풍황자원평가, 발전량 평가 및 풍력발전단지 설계)
+        *   신재생에너지 발전사업 중개 (태양광, 육상/해상 풍력, 연료전지 발전사업 중개거래, RE100 PPA 중개거래)
+        *   신재생에너지 발전사업 운영 (풍력, 태양광 발전사업 운영, 소규모 태양광 발전사업 운영 및 법인 관리)
+
+5.  **Management Section:**
+    *   Content: List of power plants with capacity, address, and operation start date.
+    *   Image placeholders for "발전소 전경".
+
+6.  **Contact Section:**
+    *   Content: "담당자 email : koreawindpower@naver.com"
+
+7.  **Footer:**
+    *   Multi-column layout with links and contact info, updated company name.
+    *   Copyright notice.
+    *   Responsiveness: Layout adjusts for tablet and mobile screens.
+
+## Current Task: Rebuilding Homepage Structure and Content
 
 *   **Status:** In Progress
-*   **Previous Step:** User agreement on design changes.
+*   **Previous Step:** Git commit of initial light theme design.
 *   **Steps:**
-    1.  Update color theme in `style.css`.
-    2.  Update logo text in `index.html`.
-    3.  Prepare files for git commit.
+    1.  Reconstruct `index.html` with the new tab-based navigation and sections (About, Business, Management, Contact), incorporating the provided content.
+    2.  Remove/Adjust styles in `style.css` for old sections and add/modify for new sections.
+    3.  Ensure `main.js` smooth scrolling is compatible with new section IDs.

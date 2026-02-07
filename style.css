@@ -164,101 +164,113 @@ ul {
     margin: 0 auto 60px auto;
 }
 
-/* --- VISION SECTION --- */
-.vision-grid {
+/* --- ABOUT SECTION --- */
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-primary-text);
+}
+
+/* --- BUSINESS SECTION --- */
+.business-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     text-align: left;
+    padding-top: 20px;
 }
 
-.vision-item {
+.business-item {
     background-color: var(--color-layer-bg);
-    padding: 40px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 10px;
     border: 1px solid #E0E6ED;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.vision-icon {
-    margin-bottom: 20px;
-}
-
-.vision-icon svg {
-    color: var(--color-accent);
-}
-
-.vision-title {
+.business-item h3 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.vision-text {
-    color: var(--color-secondary-text);
-}
-
-/* --- SERVICES SECTION --- */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: left;
-}
-
-.service-card {
-    background-color: var(--color-layer-bg);
-    padding: 35px;
-    border-radius: 12px;
-    border: 1px solid #E0E6ED;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-}
-
-.service-icon {
-    margin-bottom: 20px;
-}
-
-.service-icon svg {
+    font-size: 1.4rem;
     color: var(--color-accent);
+    margin-bottom: 15px;
 }
 
-.service-title {
+.business-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.business-item li {
+    font-size: 0.95rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* --- MANAGEMENT SECTION --- */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.management-item {
+    background-color: var(--color-layer-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #E0E6ED;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.management-item h3 {
     font-family: var(--font-heading);
     font-size: 1.3rem;
+    color: var(--color-primary-text);
     margin-bottom: 10px;
 }
 
-.service-text {
-    color: var(--color-secondary-text);
+.management-item p {
     font-size: 0.95rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 5px;
 }
 
-/* --- PARTNERS SECTION --- */
-.partners-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-    gap: 40px;
+.management-item strong {
+    color: var(--color-primary-text);
 }
 
-.partner-logo {
+.plant-image-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f4f8;
+    border: 1px dashed #ced4da;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-secondary-text);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    color: #868e96;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
-.partner-logo:hover {
-    opacity: 1;
+/* --- CONTACT SECTION --- */
+.contact-info {
+    font-size: 1.2rem;
+    color: var(--color-primary-text);
+    margin-top: 30px;
+}
+
+.contact-info a {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 /* --- FOOTER --- */
@@ -347,8 +359,8 @@ ul {
         font-size: 4rem;
     }
 
-    .vision-grid,
-    .services-grid {
+    .business-list,
+    .management-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -376,15 +388,10 @@ ul {
         font-size: 2.5rem;
     }
 
-    .vision-grid,
-    .services-grid,
-    .partners-grid,
+    .business-list,
+    .management-grid,
     .footer-grid {
         grid-template-columns: 1fr;
-    }
-
-    .partners-grid {
-        gap: 60px;
     }
 
     .footer-bottom {

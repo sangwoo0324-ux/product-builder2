@@ -1,5 +1,7 @@
 'use strict';
 
+console.log("main.js script loaded and executing!"); // Debug log
+
 /**
  * Main JavaScript file for the Mega homepage.
  * This file will handle interactivity, animations, and other dynamic features.
@@ -91,21 +93,7 @@ class ImageGalleryItem extends HTMLElement {
 }
 customElements.define('image-gallery-item', ImageGalleryItem);
 
-// BEGIN: Test for JavaScript execution outside DOMContentLoaded
-const imageGallery = document.getElementById('image-gallery');
-if (imageGallery) {
-    const testDiv = document.createElement('div');
-    testDiv.textContent = "Management content test - if you see this, JS is working outside DOMContentLoaded!";
-    testDiv.style.padding = '20px';
-    testDiv.style.backgroundColor = 'lightblue';
-    testDiv.style.border = '1px solid blue';
-    testDiv.style.margin = '10px';
-    imageGallery.appendChild(testDiv);
-}
-// END: Test for JavaScript execution outside DOMContentLoaded
 
-// Original DOMContentLoaded content (commented out for this test)
-/*
 document.addEventListener('DOMContentLoaded', () => {
     // Gemini API Integration (Placeholder)
     // Replace 'YOUR_API_KEY' with your actual API key
@@ -180,5 +168,62 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', newTheme);
         });
     }
+
+    // Dynamic Image Loading for Management Section
+    const imageGallery = document.getElementById('image-gallery');
+    if (imageGallery) {
+        const images = [
+            {
+                title: '경북 영주 태양광 발전소',
+                capacity: '100Kw급',
+                address: '경북 영주시 평은면',
+                start_date: '2018년',
+                src: 'photo/영주 태양광.jpg',
+                alt: '경북 영주 태양광 발전소 전경'
+            },
+            {
+                title: '충남 청양 태양광 발전소',
+                capacity: '500Kw급',
+                address: '충남 청양군 청남면',
+                start_date: '2021년',
+                src: 'photo/청양 태양광.jpg',
+                alt: '충남 청양 태양광 발전소 전경'
+            },
+            {
+                title: '경남 진주1 태양광 발전소',
+                capacity: '100Kw급',
+                address: '경남 진주시 금곡면',
+                start_date: '2024년',
+                src: 'photo/진주1 태양광.jpg',
+                alt: '경남 진주1 태양광 발전소 전경'
+            },
+            {
+                title: '경남 진주2 태양광 발전소',
+                capacity: '300Kw급',
+                address: '경남 진주시 미천면',
+                start_date: '2025년',
+                src: 'photo/진주2 태양광.png',
+                alt: '경남 진주2 태양광 발전소 전경'
+            },
+            {
+                title: '경남 창녕 태양광 발전소',
+                capacity: '300kW급',
+                address: '경남 창녕군 성산면',
+                start_date: '2025년',
+                src: 'photo/창녕 태양광.jpg',
+                alt: '경남 창녕 태양광 발전소 전경'
+            },
+        ];
+
+        images.forEach(imageData => {
+            const galleryItem = document.createElement('image-gallery-item');
+            galleryItem.setAttribute('src', imageData.src);
+            galleryItem.setAttribute('alt', imageData.alt);
+            galleryItem.setAttribute('title', imageData.title);
+            galleryItem.setAttribute('capacity', imageData.capacity);
+            galleryItem.setAttribute('address', imageData.address);
+            galleryItem.setAttribute('start_date', imageData.start_date);
+            imageGallery.appendChild(galleryItem);
+        });
+    }
 });
-*/

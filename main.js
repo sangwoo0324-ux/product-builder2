@@ -104,11 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof window.GoogleGenerativeAI !== 'undefined') {
             genAIInstance = new window.GoogleGenerativeAI(API_KEY);
             console.log("Gemini API initialized using window.GoogleGenerativeAI");
-        } else if (typeof window.GenAI !== 'undefined') { // Fallback to original GenAI if that was the global
-            genAIInstance = new window.GenAI(API_KEY); // Assuming GenAI also takes API key directly
-            console.log("Gemini API initialized using window.GenAI");
         } else {
-            console.error("Gemini API object (GoogleGenerativeAI or GenAI) is not defined in window.");
+            console.error("Gemini API object (GoogleGenerativeAI) is not defined in window. Please ensure the @google/genai UMD CDN script is loaded correctly.");
         }
 
         if (genAIInstance) {

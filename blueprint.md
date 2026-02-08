@@ -54,16 +54,6 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Copyright notice.
     *   Responsiveness: Layout adjusts for tablet and mobile screens.
 
-## Current Task: Integrate Gemini API
-
-*   **Status:** In Progress
-*   **Previous Step:** Implemented image gallery and light/dark mode.
-*   **Steps:**
-    1.  Add Gemini Web SDK script from CDN to `index.html`.
-    2.  Add placeholder for Gemini API key in `main.js`.
-    3.  Add basic Gemini model initialization and a simple function call in `main.js`.
-    4.  Instruct user to replace placeholder API key and integrate the example function as needed.
-
 ## Completed Tasks:
 
 *   **Implement Image Gallery and Light/Dark Mode:**
@@ -72,3 +62,12 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Implemented light/dark mode toggle functionality in `main.js` (adding/removing a class from `body`).
     *   Updated `style.css` to define CSS variables for light and dark mode colors and apply thematic styling.
     *   Ensured proper linking of `main.js` and `style.css` in `index.html`.
+*   **Fix Management Section Display Issue:**
+    *   Modified the `ImageGalleryItem` Web Component in `main.js` to gracefully handle `null` or empty attribute values for 'capacity', 'address', and 'start_date', preventing the literal string "null" from being displayed.
+    *   Enhanced `ImageGalleryItem` to handle potentially missing or empty `src` attributes for images, ensuring that an invalid image path is not set and providing a default `alt` text.
+
+## Current Task: Verify Fix
+
+*   **Steps:**
+    1.  User to verify if the "null" values for image, "용량", "주소", and "최초운전개시" are no longer displayed in the "management tap".
+    2.  User to confirm if images are loading correctly.

@@ -17,8 +17,11 @@ class ImageGalleryItem extends HTMLElement {
         container.classList.add('item-container');
 
         const img = document.createElement('img');
-        img.src = this.getAttribute('src');
-        img.alt = this.getAttribute('alt');
+        const imgSrc = this.getAttribute('src');
+        if (imgSrc) {
+            img.src = imgSrc;
+        }
+        img.alt = this.getAttribute('alt') || 'Image description not available';
         img.loading = 'lazy';
 
         const infoDiv = document.createElement('div');
@@ -28,13 +31,14 @@ class ImageGalleryItem extends HTMLElement {
         title.textContent = this.getAttribute('title');
 
         const capacity = document.createElement('p');
-        capacity.textContent = `용량: ${this.getAttribute('capacity')}`;
+        const capacityValue = this.getAttribute('capacity');
+        capacity.textContent = capacityValue ? `용량: ${capacityValue}` : '';
 
-        const address = document.createElement('p');
-        address.textContent = `주소: ${this.getAttribute('address')}`;
+        const addressValue = this.getAttribute('address');
+        address.textContent = addressValue ? `주소: ${addressValue}` : '';
 
-        const startDate = document.createElement('p');
-        startDate.textContent = `최초운전개시: ${this.getAttribute('start_date')}`;
+        const startDateValue = this.getAttribute('start_date');
+        startDate.textContent = startDateValue ? `최초운전개시: ${startDateValue}` : '';
 
         infoDiv.appendChild(title);
         infoDiv.appendChild(capacity);

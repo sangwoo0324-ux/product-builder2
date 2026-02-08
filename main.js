@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("main.js script loaded and executing!"); // Debug log
-
 /**
  * Main JavaScript file for the Mega homepage.
  * This file will handle interactivity, animations, and other dynamic features.
@@ -95,6 +93,7 @@ customElements.define('image-gallery-item', ImageGalleryItem);
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("main.js script loaded and executing (inside DOMContentLoaded)!"); // Debug log
     // Gemini API Integration (Placeholder)
     // Replace 'YOUR_API_KEY' with your actual API key
     const API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key

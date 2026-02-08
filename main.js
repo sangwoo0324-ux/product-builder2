@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Using direct import now, so GoogleGenerativeAI should be defined
     try {
-        genAIInstance = new GoogleGenAI({ apiKey: API_KEY });
+        genAIInstance = new GoogleGenAI(API_KEY);
         console.log("Gemini API initialized using direct import (GoogleGenAI v1.40.0)");
     } catch (error) {
         console.error("Error during Gemini API initialization (direct import - GoogleGenAI v1.40.0):", error);

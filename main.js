@@ -1,6 +1,6 @@
 'use strict';
 
-import { GoogleGenAI } from 'https://cdn.jsdelivr.net/npm/@google/genai@1.40.0/+esm';
+
 
 /**
  * Main JavaScript file for the Mega homepage.
@@ -95,47 +95,11 @@ customElements.define('image-gallery-item', ImageGalleryItem);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("main.js script loaded and executing (inside DOMContentLoaded)!"); // Debug log
 
-    // Gemini API Integration (Placeholder)
-    // Replace 'YOUR_API_KEY' with your actual API key
-    const API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key
 
-    let genAIInstance;
+
     
-    // Using direct import now, so GoogleGenerativeAI should be defined
-    try {
-        genAIInstance = new GoogleGenAI(API_KEY);
-        console.log("Gemini API initialized using direct import (GoogleGenAI v1.40.0)");
-    } catch (error) {
-        console.error("Error during Gemini API initialization (direct import - GoogleGenAI v1.40.0):", error);
-    }
     
-    if (genAIInstance) {
-        const geminiModel = genAIInstance.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-        // Example function to call Gemini (this is a placeholder, actual usage will vary)
-        async function runGeminiExample() {
-            try {
-                const prompt = "Write a short, engaging slogan for a renewable energy company.";
-                const result = await geminiModel.generateContent(prompt);
-                const response = await result.response;
-                const text = response.text();
-                console.log("Gemini Response:", text);
-                // You can update a DOM element with this text, for example:
-                // document.getElementById('gemini-slogan').textContent = text;
-            } catch (error) {
-                console.error("Error calling Gemini API:", error);
-            }
-        }
-
-        // You might call this function based on a user action or on page load
-        // runGeminiExample();
-    } else {
-        console.error("Gemini API instance could not be created. Check API_KEY or import path.");
-    }
-
-    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
     navLinks.forEach(link => {

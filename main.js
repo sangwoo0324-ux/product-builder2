@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capacity: '100Kw급',
                 address: '경북 영주시 평은면',
                 start_date: '2018년',
-                src: 'photo/yeongju-solar.jpg',
+                src: '/photo/yeongju-solar.jpg',
                 alt: '경북 영주 태양광 발전소 전경'
             },
             {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capacity: '500Kw급',
                 address: '충남 청양군 청남면',
                 start_date: '2021년',
-                src: 'photo/cheongyang-solar.jpg',
+                src: '/photo/cheongyang-solar.jpg',
                 alt: '충남 청양 태양광 발전소 전경'
             },
             {
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capacity: '100Kw급',
                 address: '경남 진주시 금곡면',
                 start_date: '2024년',
-                src: 'photo/jinju1-solar.jpg',
+                src: '/photo/jinju1-solar.jpg',
                 alt: '경남 진주1 태양광 발전소 전경'
             },
             {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capacity: '300Kw급',
                 address: '경남 진주시 미천면',
                 start_date: '2025년',
-                src: 'photo/jinju2-solar.png',
+                src: '/photo/jinju2-solar.png',
                 alt: '경남 진주2 태양광 발전소 전경'
             },
             {
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capacity: '300kW급',
                 address: '경남 창녕군 성산면',
                 start_date: '2025년',
-                src: 'photo/changnyeong-solar.jpg',
+                src: '/photo/changnyeong-solar.jpg',
                 alt: '경남 창녕 태양광 발전소 전경'
             },
         ];

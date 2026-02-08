@@ -72,10 +72,12 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Corrected `main.js` to ensure `address` and `startDate` variables are properly declared using `document.createElement('p')` within the `ImageGalleryItem` Web Component constructor, resolving `Uncaught ReferenceError` issues.
 *   **Resolve Content Security Policy (CSP) Issue:**
     *   Modified `index.html` to add `'unsafe-eval'` to the `script-src` directive in the Content Security Policy (CSP) meta tag. This allows the execution of JavaScript code that uses `eval()` and similar functions, resolving related errors. (Note: This change increases security risk and should be reviewed for long-term solutions.)
+*   **Update Image Paths to Absolute:**
+    *   Modified `main.js` to change all image `src` paths from relative ('photo/...') to absolute ('/photo/...') to improve consistency and resolve potential loading issues across different environments.
 
 ## Current Task: Verify Fix
 
 *   **Steps:**
     1.  User to verify if the "null" values for image, "용량", "주소", and "최초운전개시" are no longer displayed in the "management tap".
-    2.  User to confirm if images and data are loading correctly, and no JavaScript errors are present in the browser console.
-    3.  User to confirm that the Content Security Policy (CSP) error related to 'eval' is no longer appearing.
+    2.  User to confirm if all images are loading correctly.
+    3.  User to confirm that no JavaScript errors (including CSP related errors) are present in the browser console.

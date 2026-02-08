@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 title: '충남 청양 태양광 발전소',
-                capacity: '500Kw급',
+                capacity: '100Kw급',
                 address: '충남 청양군 청남면',
                 start_date: '2021년',
                 src: '/photo/cheongyang-solar.jpg',

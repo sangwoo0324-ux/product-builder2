@@ -55,6 +55,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 
 ## Completed Tasks:
 
+*   **Updated `images` array in `main.js` to match the live site data for the management tab.**
 *   **Implement Image Gallery and Light/Dark Mode:**
     *   Modified `index.html` to include a container for the image gallery and a theme toggle button.
     *   Created a Web Component in `main.js` to display images dynamically, categorized by business.
@@ -73,6 +74,3 @@ The goal is to create a modern, responsive, and visually engaging single-page la
     *   Modified `index.html` to add `'unsafe-eval'` to the `script-src` directive in the Content Security Policy (CSP) meta tag. This allows the execution of JavaScript code that uses `eval()` and similar functions, resolving related errors. (Note: This change increases security risk and should be reviewed for long-term solutions.)
 *   **Update Image Paths to Absolute:**
     *   Modified `main.js` to change all image `src` paths from relative ('photo/...') to absolute ('/photo/...') to improve consistency and resolve potential loading issues across different environments.
-
-## Pending Tasks:
-*   The `images` array in `main.js` was reviewed and confirmed to match the user-provided content for the management tab.

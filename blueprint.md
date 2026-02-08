@@ -55,6 +55,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 
 ## Completed Tasks:
 
+*   **Inserted Image for "경북 영주 태양광 발전소":** The `plant-image-placeholder` for "경북 영주 태양광 발전소" in `index.html` was replaced with an `<img>` tag, using the provided URL and adding `alt` and `loading="lazy"` attributes.
 *   **Refactored Management Tab to Static HTML:** The management section was refactored from a dynamic, Web Component-based approach to a static HTML structure directly embedded in `index.html`, along with new CSS styling in `style.css` for a grid layout and placeholders for images. The `meta http-equiv="Content-Security-Policy"` was removed from `index.html`.
 *   **Removed Redundant JavaScript:** The `ImageGalleryItem` Web Component definition, dynamic image loading logic, and theme toggle functionality were removed from `main.js` to align with the new static HTML structure and user's changes in `index.html` and `style.css`.
 *   **Updated Header Logo and Theme Toggle:** The `logo.jpg` image was removed from the header, and the theme toggle button and its functionality were removed, reflecting the user's latest `index.html` changes.

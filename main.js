@@ -1,6 +1,6 @@
 'use strict';
 
-import { GoogleGenerativeAI } from 'https://cdn.jsdelivr.net/npm/@google/generative-ai@latest/dist/index.min.js';
+import { GoogleGenAI } from 'https://cdn.jsdelivr.net/npm/@google/genai@1.40.0/dist/index.min.js';
 
 /**
  * Main JavaScript file for the Mega homepage.
@@ -105,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Using direct import now, so GoogleGenerativeAI should be defined
     try {
-        genAIInstance = new GoogleGenerativeAI({ apiKey: API_KEY });
-        console.log("Gemini API initialized using direct import (GoogleGenerativeAI)");
+        genAIInstance = new GoogleGenAI({ apiKey: API_KEY });
+        console.log("Gemini API initialized using direct import (GoogleGenAI v1.40.0)");
     } catch (error) {
-        console.error("Error during Gemini API initialization (direct import - GoogleGenerativeAI):", error);
+        console.error("Error during Gemini API initialization (direct import - GoogleGenAI v1.40.0):", error);
     }
     
     if (genAIInstance) {

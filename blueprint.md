@@ -43,8 +43,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
         *   신재생에너지 발전사업 운영 (풍력, 태양광 발전사업 운영, 소규모 태양광 발전사업 운영 및 법인 관리)
 
 5.  **Management Section:**
-    *   Content: List of power plants with capacity, address, and operation start date.
-    *   Image placeholders for "발전소 전경".
+    *   Content: Solar power plant images are now directly embedded within the image-gallery div.
 
 6.  **Contact Section:**
     *   Content: "담당자 email : koreawindpower@naver.com"
@@ -56,6 +55,8 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 
 ## Completed Tasks:
 
+*   **Embed Solar Power Plant Images:**
+    *   Directly embedded image tags for solar power plants from the `photo` directory into the `image-gallery` div within `index.html`.
 *   **Implement Image Gallery and Light/Dark Mode:**
     *   Modified `index.html` to include a container for the image gallery and a theme toggle button.
     *   Created a Web Component in `main.js` to display images dynamically, categorized by business.

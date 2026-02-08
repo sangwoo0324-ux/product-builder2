@@ -283,6 +283,20 @@ html[data-theme='dark'] .theme-toggle .sun {
     padding-top: 20px;
 }
 
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+    border-radius: 8px; /* Slightly rounded corners for aesthetics */
+    box-shadow: var(--shadow-small); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: var(--shadow-medium); /* More prominent shadow on hover */
+}
+
 
 /* --- CONTACT SECTION --- */
 .contact-info {

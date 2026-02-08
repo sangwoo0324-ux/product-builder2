@@ -43,7 +43,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
         *   신재생에너지 발전사업 운영 (풍력, 태양광 발전사업 운영, 소규모 태양광 발전사업 운영 및 법인 관리)
 
 5.  **Management Section:**
-    *   Content: Solar power plant images are now directly embedded within the image-gallery div.
+    *   Content: Solar power plant images and their details are dynamically loaded into the image-gallery div using the `image-gallery-item` Web Component.
 
 6.  **Contact Section:**
     *   Content: "담당자 email : koreawindpower@naver.com"
@@ -55,8 +55,6 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 
 ## Completed Tasks:
 
-*   **Embed Solar Power Plant Images:**
-    *   Directly embedded image tags for solar power plants from the `photo` directory into the `image-gallery` div within `index.html`.
 *   **Implement Image Gallery and Light/Dark Mode:**
     *   Modified `index.html` to include a container for the image gallery and a theme toggle button.
     *   Created a Web Component in `main.js` to display images dynamically, categorized by business.
@@ -76,9 +74,5 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 *   **Update Image Paths to Absolute:**
     *   Modified `main.js` to change all image `src` paths from relative ('photo/...') to absolute ('/photo/...') to improve consistency and resolve potential loading issues across different environments.
 
-## Current Task: Verify Fix
-
-*   **Steps:**
-    1.  User to verify if the "null" values for image, "용량", "주소", and "최초운전개시" are no longer displayed in the "management tap".
-    2.  User to confirm if all images are loading correctly.
-    3.  User to confirm that no JavaScript errors (including CSP related errors) are present in the browser console.
+## Pending Tasks:
+*   The `images` array in `main.js` was reviewed and confirmed to match the user-provided content for the management tab.

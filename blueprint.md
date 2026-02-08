@@ -43,7 +43,7 @@ The goal is to create a modern, responsive, and visually engaging single-page la
         *   신재생에너지 발전사업 운영 (풍력, 태양광 발전사업 운영, 소규모 태양광 발전사업 운영 및 법인 관리)
 
 5.  **Management Section:**
-    *   Content: Solar power plant images and their details are dynamically loaded into the image-gallery div using the `image-gallery-item` Web Component.
+    *   Content: Solar power plant details are now statically embedded directly into `index.html` using a grid layout.
 
 6.  **Contact Section:**
     *   Content: "담당자 email : koreawindpower@naver.com"
@@ -55,22 +55,8 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 
 ## Completed Tasks:
 
-*   **Updated `images` array in `main.js` to match the live site data for the management tab.**
-*   **Implement Image Gallery and Light/Dark Mode:**
-    *   Modified `index.html` to include a container for the image gallery and a theme toggle button.
-    *   Created a Web Component in `main.js` to display images dynamically, categorized by business.
-    *   Implemented light/dark mode toggle functionality in `main.js` (adding/removing a class from `body`).
-    *   Updated `style.css` to define CSS variables for light and dark mode colors and apply thematic styling.
-    *   Ensured proper linking of `main.js` and `style.css` in `index.html`.
-*   **Fix Management Section Display Issue:**
-    *   Modified the `ImageGalleryItem` Web Component in `main.js` to gracefully handle `null` or empty attribute values for 'capacity', 'address', and 'start_date', preventing the literal string "null" from being displayed.
-    *   Enhanced `ImageGalleryItem` to handle potentially missing or empty `src` attributes for images, ensuring that an invalid image path is not set and providing a default `alt` text.
-*   **Rename Image Files and Update Paths:**
-    *   Renamed image files in the `photo` directory from Korean filenames with spaces to English filenames with hyphens (e.g., `영주 태양광.jpg` to `yeongju-solar.jpg`).
-    *   Updated corresponding `src` paths in the `images` array within `main.js` to reflect the new English filenames.
-*   **Resolve ReferenceError in ImageGalleryItem:**
-    *   Corrected `main.js` to ensure `address` and `startDate` variables are properly declared using `document.createElement('p')` within the `ImageGalleryItem` Web Component constructor, resolving `Uncaught ReferenceError` issues.
-*   **Resolve Content Security Policy (CSP) Issue:**
-    *   Modified `index.html` to add `'unsafe-eval'` to the `script-src` directive in the Content Security Policy (CSP) meta tag. This allows the execution of JavaScript code that uses `eval()` and similar functions, resolving related errors. (Note: This change increases security risk and should be reviewed for long-term solutions.)
-*   **Update Image Paths to Absolute:**
-    *   Modified `main.js` to change all image `src` paths from relative ('photo/...') to absolute ('/photo/...') to improve consistency and resolve potential loading issues across different environments.
+*   **Refactored Management Tab to Static HTML:** The management section was refactored from a dynamic, Web Component-based approach to a static HTML structure directly embedded in `index.html`, along with new CSS styling in `style.css` for a grid layout and placeholders for images. The `meta http-equiv="Content-Security-Policy"` was removed from `index.html`.
+*   **Removed Redundant JavaScript:** The `ImageGalleryItem` Web Component definition, dynamic image loading logic, and theme toggle functionality were removed from `main.js` to align with the new static HTML structure and user's changes in `index.html` and `style.css`.
+*   **Updated Header Logo and Theme Toggle:** The `logo.jpg` image was removed from the header, and the theme toggle button and its functionality were removed, reflecting the user's latest `index.html` changes.
+*   **Resolved ReferenceError in ImageGalleryItem (Previous Dynamic Approach):** (Note: This task is related to the previous dynamic approach and is kept for historical context of work done.) Corrected `main.js` to ensure `address` and `startDate` variables are properly declared using `document.createElement('p')` within the `ImageGalleryItem` Web Component constructor, resolving `Uncaught ReferenceError` issues.
+*   **Update Image Paths to Absolute (Previous Dynamic Approach):** (Note: This task is related to the previous dynamic approach and is kept for historical context of work done.) Modified `main.js` to change all image `src` paths from relative ('photo/...') to absolute ('/photo/...') to improve consistency and resolve potential loading issues across different environments.

@@ -11,10 +11,36 @@ class ImageGalleryItem extends HTMLElement {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
 
+        const container = document.createElement('div');
+        container.classList.add('item-container');
+
         const img = document.createElement('img');
         img.src = this.getAttribute('src');
         img.alt = this.getAttribute('alt');
-        img.loading = 'lazy'; // Lazy load images
+        img.loading = 'lazy';
+
+        const infoDiv = document.createElement('div');
+        infoDiv.classList.add('item-info');
+
+        const title = document.createElement('h3');
+        title.textContent = this.getAttribute('title');
+
+        const capacity = document.createElement('p');
+        capacity.textContent = `용량: ${this.getAttribute('capacity')}`;
+
+        const address = document.createElement('p');
+        address.textContent = `주소: ${this.getAttribute('address')}`;
+
+        const startDate = document.createElement('p');
+        startDate.textContent = `최초운전개시: ${this.getAttribute('start_date')}`;
+
+        infoDiv.appendChild(title);
+        infoDiv.appendChild(capacity);
+        infoDiv.appendChild(address);
+        infoDiv.appendChild(startDate);
+
+        container.appendChild(img);
+        container.appendChild(infoDiv);
 
         const style = document.createElement('style');
         style.textContent = `
@@ -25,9 +51,15 @@ class ImageGalleryItem extends HTMLElement {
                 overflow: hidden;
                 box-shadow: var(--shadow-small);
                 transition: transform 0.2s ease-in-out;
+                background-color: var(--color-background);
             }
             :host(:hover) {
                 transform: translateY(-5px);
+            }
+            .item-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
             }
             img {
                 width: 100%;
@@ -35,10 +67,26 @@ class ImageGalleryItem extends HTMLElement {
                 object-fit: cover;
                 display: block;
             }
+            .item-info {
+                padding: 15px;
+                flex-grow: 1;
+            }
+            .item-info h3 {
+                margin-top: 0;
+                margin-bottom: 10px;
+                color: var(--color-heading);
+                font-size: 1.2em;
+            }
+            .item-info p {
+                margin-bottom: 5px;
+                color: var(--color-text);
+                font-size: 0.9em;
+                line-height: 1.4;
+            }
         `;
 
         shadow.appendChild(style);
-        shadow.appendChild(img);
+        shadow.appendChild(container);
     }
 }
 customElements.define('image-gallery-item', ImageGalleryItem);
@@ -117,10 +165,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageGallery = document.getElementById('image-gallery');
     if (imageGallery) {
         const images = [
-            { business: 'BusinessA', src: 'phto/BusinessA/plant_A_01.jpg', alt: 'Power Plant A 01' },
-            { business: 'BusinessA', src: 'phto/BusinessA/plant_A_02.jpg', alt: 'Power Plant A 02' },
-            { business: 'BusinessB', src: 'phto/BusinessB/plant_B_01.jpg', alt: 'Power Plant B 01' },
-            // Add more images as needed
+            {
+                title: '경북 영주 태양광 발전소',
+                capacity: '100Kw급',
+                address: '경북 영주시 평은면',
+                start_date: '2018년',
+                src: 'photo/영주 태양광.jpg',
+                alt: '경북 영주 태양광 발전소 전경'
+            },
+            {
+                title: '충남 청양 태양광 발전소',
+                capacity: '500Kw급',
+                address: '충남 청양군 청남면',
+                start_date: '2021년',
+                src: 'photo/청양 태양광.jpg',
+                alt: '충남 청양 태양광 발전소 전경'
+            },
+            {
+                title: '경남 진주1 태양광 발전소',
+                capacity: '100Kw급',
+                address: '경남 진주시 금곡면',
+                start_date: '2024년',
+                src: 'photo/진주1 태양광.jpg',
+                alt: '경남 진주1 태양광 발전소 전경'
+            },
+            {
+                title: '경남 진주2 태양광 발전소',
+                capacity: '300Kw급',
+                address: '경남 진주시 미천면',
+                start_date: '2025년',
+                src: 'photo/진주2 태양광.png',
+                alt: '경남 진주2 태양광 발전소 전경'
+            },
+            {
+                title: '경남 창녕 태양광 발전소',
+                capacity: '300kW급',
+                address: '경남 창녕군 성산면',
+                start_date: '2025년',
+                src: 'photo/창녕 태양광.jpg',
+                alt: '경남 창녕 태양광 발전소 전경'
+            },
         ];
 
         images.forEach(imageData => {

@@ -34,9 +34,11 @@ class ImageGalleryItem extends HTMLElement {
         const capacityValue = this.getAttribute('capacity');
         capacity.textContent = capacityValue ? `용량: ${capacityValue}` : '';
 
+        const address = document.createElement('p');
         const addressValue = this.getAttribute('address');
         address.textContent = addressValue ? `주소: ${addressValue}` : '';
 
+        const startDate = document.createElement('p');
         const startDateValue = this.getAttribute('start_date');
         startDate.textContent = startDateValue ? `최초운전개시: ${startDateValue}` : '';
 

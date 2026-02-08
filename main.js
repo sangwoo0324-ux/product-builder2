@@ -91,7 +91,21 @@ class ImageGalleryItem extends HTMLElement {
 }
 customElements.define('image-gallery-item', ImageGalleryItem);
 
+// BEGIN: Test for JavaScript execution outside DOMContentLoaded
+const imageGallery = document.getElementById('image-gallery');
+if (imageGallery) {
+    const testDiv = document.createElement('div');
+    testDiv.textContent = "Management content test - if you see this, JS is working outside DOMContentLoaded!";
+    testDiv.style.padding = '20px';
+    testDiv.style.backgroundColor = 'lightblue';
+    testDiv.style.border = '1px solid blue';
+    testDiv.style.margin = '10px';
+    imageGallery.appendChild(testDiv);
+}
+// END: Test for JavaScript execution outside DOMContentLoaded
 
+// Original DOMContentLoaded content (commented out for this test)
+/*
 document.addEventListener('DOMContentLoaded', () => {
     // Gemini API Integration (Placeholder)
     // Replace 'YOUR_API_KEY' with your actual API key
@@ -166,16 +180,5 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', newTheme);
         });
     }
-
-    // Dynamic Image Loading for Management Section (Simplified Test)
-    const imageGallery = document.getElementById('image-gallery');
-    if (imageGallery) {
-        const testDiv = document.createElement('div');
-        testDiv.textContent = "Management content test - if you see this, JS is working!";
-        testDiv.style.padding = '20px';
-        testDiv.style.backgroundColor = 'lightgreen';
-        testDiv.style.border = '1px solid green';
-        testDiv.style.margin = '10px';
-        imageGallery.appendChild(testDiv);
-    }
 });
+*/

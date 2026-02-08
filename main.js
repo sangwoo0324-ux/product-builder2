@@ -1,6 +1,6 @@
 'use strict';
 
-import { GoogleGenAI } from 'https://cdn.jsdelivr.net/npm/@google/genai@1.40.0/dist/index.min.js';
+import { GoogleGenAI } from 'https://cdn.jsdelivr.net/npm/@google/genai@1.40.0/+esm';
 
 /**
  * Main JavaScript file for the Mega homepage.

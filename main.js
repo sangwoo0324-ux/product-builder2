@@ -95,26 +95,32 @@ customElements.define('image-gallery-item', ImageGalleryItem);
 document.addEventListener('DOMContentLoaded', () => {
     // Gemini API Integration (Placeholder)
     // Replace 'YOUR_API_KEY' with your actual API key
-    const API_KEY = 'YOUR_API_KEY'; 
-    const genAI = new GenAI.GenerativeModel(API_KEY, { model: "gemini-2.5-flash" });
+    const API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key
+    // Ensure GoogleGenerativeAI is globally available from the CDN script
+    if (typeof GoogleGenerativeAI !== 'undefined') {
+        const genAIInstance = new GoogleGenerativeAI(API_KEY);
+        const geminiModel = genAIInstance.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-    // Example function to call Gemini (this is a placeholder, actual usage will vary)
-    async function runGeminiExample() {
-        try {
-            const prompt = "Write a short, engaging slogan for a renewable energy company.";
-            const result = await genAI.generateContent(prompt);
-            const response = await result.response;
-            const text = response.text();
-            console.log("Gemini Response:", text);
-            // You can update a DOM element with this text, for example:
-            // document.getElementById('gemini-slogan').textContent = text;
-        } catch (error) {
-            console.error("Error calling Gemini API:", error);
+        // Example function to call Gemini (this is a placeholder, actual usage will vary)
+        async function runGeminiExample() {
+            try {
+                const prompt = "Write a short, engaging slogan for a renewable energy company.";
+                const result = await geminiModel.generateContent(prompt);
+                const response = await result.response;
+                const text = response.text();
+                console.log("Gemini Response:", text);
+                // You can update a DOM element with this text, for example:
+                // document.getElementById('gemini-slogan').textContent = text;
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+            }
         }
-    }
 
-    // You might call this function based on a user action or on page load
-    // runGeminiExample(); 
+        // You might call this function based on a user action or on page load
+        // runGeminiExample();
+    } else {
+        console.error("GoogleGenerativeAI is not defined. Please ensure the Gemini CDN script is loaded correctly or check its global name.");
+    }
 
 
     // Smooth scrolling for navigation links
@@ -211,6 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const galleryItem = document.createElement('image-gallery-item');
             galleryItem.setAttribute('src', imageData.src);
             galleryItem.setAttribute('alt', imageData.alt);
+            galleryItem.setAttribute('title', imageData.title);
+            galleryItem.setAttribute('capacity', imageData.capacity);
+            galleryItem.setAttribute('address', imageData.address);
+            galleryItem.setAttribute('start_date', imageData.start_date);
             imageGallery.appendChild(galleryItem);
         });
     }

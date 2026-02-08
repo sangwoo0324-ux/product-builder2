@@ -65,6 +65,9 @@ The goal is to create a modern, responsive, and visually engaging single-page la
 *   **Fix Management Section Display Issue:**
     *   Modified the `ImageGalleryItem` Web Component in `main.js` to gracefully handle `null` or empty attribute values for 'capacity', 'address', and 'start_date', preventing the literal string "null" from being displayed.
     *   Enhanced `ImageGalleryItem` to handle potentially missing or empty `src` attributes for images, ensuring that an invalid image path is not set and providing a default `alt` text.
+*   **Rename Image Files and Update Paths:**
+    *   Renamed image files in the `photo` directory from Korean filenames with spaces to English filenames with hyphens (e.g., `영주 태양광.jpg` to `yeongju-solar.jpg`).
+    *   Updated corresponding `src` paths in the `images` array within `main.js` to reflect the new English filenames.
 
 ## Current Task: Verify Fix
 

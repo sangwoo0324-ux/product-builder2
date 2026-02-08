@@ -100,13 +100,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key
 
     let genAIInstance;
+    let foundGlobalName = null;
+    const possibleGlobalNames = ['GoogleGenerativeAI', 'genai', 'GenAI']; // Common global names for this library
+
     try {
-        if (typeof window.GoogleGenerativeAI !== 'undefined') {
-            genAIInstance = new window.GoogleGenerativeAI(API_KEY);
-            console.log("Gemini API initialized using window.GoogleGenerativeAI");
-        } else {
-            console.error("Gemini API object (GoogleGenerativeAI) is not defined in window. Please ensure the @google/genai UMD CDN script is loaded correctly.");
+        for (const name of possibleGlobalNames) {
+            if (typeof window[name] !== 'undefined') {
+                genAIInstance = new window[name](API_KEY);
+                foundGlobalName = name;
+                console.log(`Gemini API initialized using window.${name}`);
+                break; // Found it, stop searching
+            }
         }
+
+        if (!foundGlobalName) {
+            console.error("Gemini API object (GoogleGenerativeAI, genai, or GenAI) is not defined in window. Please ensure the @google/genai UMD CDN script is loaded correctly or check its global name.");
+        }
+
 
         if (genAIInstance) {
             const geminiModel = genAIInstance.getGenerativeModel({ model: "gemini-2.5-flash" });
